@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+body{
+    background-color: #f2f2f2;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    
+    margin-top: 70px;
+}   
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    color: #333;
+}
+
+p{
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered{
+    text-align: center;
+}
+
+a:hover, a:focus{
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.navbar{
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-brand{
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-inverse{
+    background: #2d2d2d;
+    border-color: #2d2d2d;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover{
+    background-color: #33cccc;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover{
+    background-color: #70dbdb;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand{
+    color: #fff;
+    font-size: 22px;
+}
+
+#content_wrap {
+    background: url(../img/background.jpg) no-repeat center top;
+    margin-top: -10px;
+    padding-top: 20px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    
+    width: 100%;
+    
+    background-size: 100%;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 650px;    
+    
+}
+
+#thumbnails_options{
+    padding-top: 30px;
+}
+
+.thumbnail{
+    border: none;
+    border-radius: 48px 10px 48px 10px;
+    min-height: 360px;
+    background: rgba(188,224,238,1);
+    background: -moz-linear-gradient(top, rgba(188,224,238,1) 1%, rgba(188,224,238,0.88) 24%, rgba(89,197,232,0.62) 75%, rgba(41,184,229,0.62) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(1%, rgba(188,224,238,1)), color-stop(24%, rgba(188,224,238,0.88)), color-stop(75%, rgba(89,197,232,0.62)), color-stop(100%, rgba(41,184,229,0.62)));
+    background: -webkit-linear-gradient(top, rgba(188,224,238,1) 1%, rgba(188,224,238,0.88) 24%, rgba(89,197,232,0.62) 75%, rgba(41,184,229,0.62) 100%);
+    background: -o-linear-gradient(top, rgba(188,224,238,1) 1%, rgba(188,224,238,0.88) 24%, rgba(89,197,232,0.62) 75%, rgba(41,184,229,0.62) 100%);
+    background: -ms-linear-gradient(top, rgba(188,224,238,1) 1%, rgba(188,224,238,0.88) 24%, rgba(89,197,232,0.62) 75%, rgba(41,184,229,0.62) 100%);
+    background: linear-gradient(to bottom, rgba(188,224,238,1) 1%, rgba(188,224,238,0.88) 24%, rgba(89,197,232,0.62) 75%, rgba(41,184,229,0.62) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bce0ee', endColorstr='#29b8e5', GradientType=0 );
+}
+
+.thumbnail:hover{
+    box-shadow: 0 4px 8px 0 #196666, 0 6px 20px 0 #196666;
+}
+
+.thumbnail .caption{
+    padding: 30px 10px;
+}
+
+.caption > h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.caption > p{
+    font-size: 22px;
+}
+
+.method-execute{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    font-size: 25;
+    color: #fff;
+    border: none;
+    width: 60%;
+    height: 50px;
+    border-radius: 5px 5px;
+    background: #33cccc;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.method-execute:hover, .method-execute:focus{
+    background: #248f8f;
+    color: #fff;        
+    text-decoration: none;
+}
+
+#footer{
+    height: 90px;    
+    font-size: 30px;
+    color: #fff;
+    background: #29a3a3;
+}
+
+#footer i{
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+}
+/*COMMON METHODS STYLES
+__________start____________*/
+#content_block{
+    font-size: 22px;
+    min-height: calc(100vh - 160px);    
+}
+
+.li_navbar.dropdown-menu>li>a{
+    font-size: 20px;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.li_navbar.dropdown-menu{
+    opacity: 0.96;
+}
+
+.init_args{
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 120px;
+    text-align: center;
+    background-color: #c2f0f0;
+}
+
+.init_numbers{    
+    border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 20px;
+    max-width: 120px;    
+    text-align: center;
+    background-color: #c2f0f0;
+}
+
+.init_args:focus, .init_numbers:focus{
+    outline: none;
+}
+
+.method_table, .method_table > tbody > tr > th, .method_table > tbody > tr > td { 
+    font-size: 24px; 
+    border: 2px solid #248f8f;
+    text-align: center;
+}
+
+.method_table{
+    padding: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+th, td{
+    padding: 10px;
+}
+
+th{
+    background-color: #c2f0f0;
+}
+
+.method_table tr:first-of-type th:first-of-type {border-top-left-radius: 22px;}
+.method_table tr:first-of-type th:last-of-type {border-top-right-radius: 22px;}
+.method_table tr:last-of-type th:first-of-type{border-bottom-left-radius: 22px;}
+.method_table tr:last-of-type td:last-of-type{border-bottom-right-radius: 22px;}
+
+/*DROPDOWN CUSTOM*/
+
+/*default select*/
+.selectpicker{
+    display: none;
+}
+
+/*select container*/
+.btn-group.bootstrap-select{
+    //height: 40px;
+    //margin-bottom: 20px;
+}
+
+/*dropdown button*/
+.btn.dropdown-toggle{
+    margin: 0px!important;
+    color: #fff;
+    background-color: #29a3a3;
+    border-color: #248f8f;
+    border-radius: 9px;
+    font-size: 17px;
+}
+
+.bootstrap-select .dropdown-toggle.btn-default:focus{
+    outline: 0!important;
+}
+
+/*li selected option*/
+.dropdown-menu>li.selected>a{
+    background-color: #33cccc;
+    color: #fff;
+}
+
+/*all li hovered*/
+.dropdown-menu>li>a:hover{
+    background-color: #70dbdb;
+    color: #fff;
+}
+
+/*all li in dropdown*/
+.dropdown-menu>li{
+    font-size: 16px;
+}
+
+/*dropdown header*/
+.popover-title{
+    background-color: #c2f0f0;
+    color: #101010;
+}
+/*DROPDOWN CUSTOM*/
+
+/*BUTTON CUSTOM*/
+.btn.btn-default{
+    margin: 30px;
+    min-width: 110px;
+    font-size: 17px;
+    color: #fff;
+    background-color: #29a3a3;
+    border-radius: 9px;
+    outline: 0!important;
+}
+/*COMMON METHODS STYLES
+___________end_____________*/
+
+
+/*SIMPLEX METHOD STYLES
+__________start____________*/
+
+
+
+/*SIMPLEX METHOD STYLES
+___________end_____________*/
+
+
+/*МЕТОД СЕВЕРО-ЗАПАДНОГО УГЛА
+__________start____________*/
+.north_west_table, .north_west_table > tbody > tr > th, .north_west_table > tbody > tr > td { 
+    font-size: 24px; 
+    border: 2px solid #248f8f;
+    text-align: center;
+}
+
+.north_west_table{
+    padding: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+th, td{
+    padding: 10px;
+}
+
+th{
+    background-color: #c2f0f0;
+}
+
+
+.north_west_table tr:first-of-type td:first-of-type {border-top-left-radius: 22px;}
+.north_west_table tr:first-of-type td:last-of-type {border-top-right-radius: 22px;}
+.north_west_table tr:last-of-type td:first-of-type{border-bottom-left-radius: 22px;}
+.north_west_table tr:last-of-type td:last-of-type{border-bottom-right-radius: 22px;}
+/*МЕТОД СЕВЕРО-ЗАПАДНОГО УГЛА
+___________end_____________*/
+
+
+
+/*ABOUT US STYLES
+__________start____________*/
+
+.author_method_info{
+    border-bottom: 3px dotted #ccc;
+}
+
+.author_info{
+    margin: 30px;
+    text-align: center;
+}
+
+.author_image{   
+    float: left;
+    border-radius: 50%;    
+    width: 100%;
+    height: auto;
+    border: 3px solid #29a3a3;
+}
+
+.author_name{
+    max-width: 100%;
+    font-size: 24px;
+    margin: 30px 10px;
+    float: left;
+    clear: both;
+}
+
+.method_info{
+    
+}
+
+.realized_methods_info > a{
+    color: #29a3a3;
+}
+
+.realized_methods_info > a:hover{
+    color: #196666;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+/*ABOUT US STYLES
+___________end_____________*/
+
+/*GRAPHIC METHOD STYLES
+__________start____________*/
+
+/*input inside table*/
+.in_table_input{    
+    border-radius: 10px;
+    margin: 20px;
+    min-width: 60px;   
+    text-align: center;
+    background-color: #c2f0f0;
+}
+
+.in_table_input:focus{
+    outline: none;
+}
+
+.graphic_table { 
+    font-size: 24px; 
+    border: 2px solid #248f8f;
+    text-align: center;
+}
+
+.graphic_table{
+    padding: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+th, td{
+    padding: 10px;
+}
+
+th{
+    background-color: #c2f0f0;
+}
+
+.graphic_table tr:first-of-type td:first-of-type {border-top-left-radius: 22px;}
+.graphic_table tr:first-of-type td:last-of-type {border-top-right-radius: 22px;}
+.graphic_table tr:last-of-type td:first-of-type{border-bottom-left-radius: 22px;}
+.graphic_table tr:last-of-type td:last-of-type{border-bottom-right-radius: 22px;}
+
+.flot_wrapper{
+    text-align: center;
+    margin: 25px 0;
+    
+}
+
+/*GRAPHIC METHOD STYLES
+___________end_____________*/
+
+/*SYMPLEX METHOD STYLES
+__________start____________*/
+
+.symplex_init_table { 
+    font-size: 24px; 
+    border: 2px solid #248f8f;
+    text-align: center;
+}
+
+.symplex_init_table{
+    padding: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+th, td{
+    padding: 10px;
+}
+
+th{
+    background-color: #c2f0f0;
+}
+
+.symplex_table tr:first-of-type td:first-of-type {border-top-left-radius: 22px;}
+.symplex_table tr:first-of-type td:last-of-type {border-top-right-radius: 22px;}
+.symplex_table tr:last-of-type td:first-of-type{border-bottom-left-radius: 22px;}
+.symplex_init_table tr:last-of-type td:last-of-type{border-bottom-right-radius: 22px;}
+
+.symplex_table, .symplex_table > tbody > tr > th, .symplex_table > tbody > tr > td { 
+    font-size: 24px; 
+    border: 2px solid #248f8f;
+    text-align: center;
+}
+
+.symplex_table{
+    padding: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+th, td{
+    padding: 10px;
+}
+
+th{
+    background-color: #c2f0f0;
+}
+
+.symplex_table tr:first-of-type td:first-of-type {border-top-left-radius: 22px;}
+.symplex_table tr:first-of-type td:last-of-type {border-top-right-radius: 22px;}
+.symplex_table tr:last-of-type td:first-of-type{border-bottom-left-radius: 22px;}
+.symplex_table tr:last-of-type td:last-of-type{border-bottom-right-radius: 22px;}
+
+/*SYMPLEX METHOD STYLES
+___________end_____________*/
+

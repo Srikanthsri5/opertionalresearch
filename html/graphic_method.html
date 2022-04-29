@@ -1,0 +1,102 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Graphical method </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon-logo.png" />
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.css" >
+    <link rel="stylesheet" href="../css/fa-brands.css" >
+    <link rel="stylesheet" href="../css/fa-regular.css" >
+    <link rel="stylesheet" href="../css/fa-solid.css" >
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+</head>
+<body>    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand" href="../index.html"> Operational Research Project </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html">home</a></li>
+                   <li class = "dropdown active"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Methods </a>
+                        <ul class = "li_navbar dropdown-menu">
+                            <li> <a href="simplex_method.html"> Simplex Method </a> </li>
+                            <li> <a href="north_west_angle.html"> Northwest Angle Method </a> </li>
+                            <li> <a href="graphic_method.html"> Graphic method for solving LPP </a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content_block">
+        <div class="container">
+            <div class="row centered">
+                <div id="data_table" class="col-lg-12">
+                    <!--<div id="data_table" style="display: none; margin-top: 30px;">    
+                    </div>-->
+                 <h1 id = "header_description"> Graphical method for solving linear programming problems </h1>
+                    <p style = "margin: 20px 0;" align = "justify"> General statement of the problem: An objective function (criterion of optimality) and a system of constraints (usually in the form of inequalities) that are imposed on variables are given. </p>
+					<p style = "margin: 20px 0;" align = "justify"> To apply the graphical method for solving linear programming problems, the number of variables must be equal to two. Then each of the inequalities of the linear programming problem defines a certain half-plane on the coordinate plane, and the system of inequalities as a whole defines the intersection of the corresponding half-planes. The set of points of intersection of these half-planes is called the region of admissible values ​​(ADV). </p>
+<p style = "margin: 20px 0;" align = "justify"> The optimal solution is always located at the border of the LDV, for example, at the last vertex of the LDV polygon, through which the line of the objective function will pass. The method also takes into account the cases of unboundedness of the DLO and the absence of a solution. </p>
+				   <div id="constraints_block" style="margin: 30px 0;">
+                        <p> Enter the number of restrictions </p>
+                        <select class="selectpicker" data-size="5" data-width="auto" name="rows" id="rows">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div id="container_for_inputs" name ="f1" ></div>
+                </div>
+                <div class="col-lg-12">
+                    <div id="error"></div>
+                    <input class="btn btn-default" id="build_structure" type="button" onclick="create_table()" value="Ok">
+                    <input class="btn btn-default" id="calculate_button" type="hidden" onclick="calculate()" value="Decide">
+                    <input class="btn btn-default" id="chart_button" type="hidden" onclick="doFlot()" value="Build">
+                    <div id="conclusion" align="justify" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-md-8 col-md-offset-2">
+                    <span style="position:relative; top: 20px;">JSS, 2020</span>
+                    <!--<i class="fab fa-angrycreative" ></i>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/jquery.min.js"></script>       
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script> 
+    <script src="../js/jquery.flot.js"></script>
+    <script src="../js/jquery.flot.canvas.js"></script>
+    <script src="../js/graphic_method.js"></script>
+    
+</body>
+</html>

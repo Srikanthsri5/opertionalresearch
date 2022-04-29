@@ -1,0 +1,100 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Simplex method </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon-logo.png" />
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.css" >
+    <link rel="stylesheet" href="../css/fa-brands.css" >
+    <link rel="stylesheet" href="../css/fa-regular.css" >
+    <link rel="stylesheet" href="../css/fa-solid.css" >
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+</head>
+<body>
+    
+     <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        <a class="navbar-brand" href="../index.html"> Operational Research Project </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                   <li> <a href="../index.html"> Home </a> </li>
+                    <li class = "dropdown active"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Methods </a>
+                        <ul class = "li_navbar dropdown-menu">
+                            <li> <a href="simplex_method.html"> Simplex Method </a> </li>
+                            <li> <a href="north_west_angle.html"> Northwest Angle Method </a> </li>
+                            <li> <a href="graphic_method.html"> Graphic method for solving LPP </a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content_block">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-12">
+                    <div>
+                      <h1 id = "# header_description"> Simplex method for solving linear programming problems </h1>
+                        <p style = "margin: 20px 0;" align = "justify"> Solves a linear optimization problem specified in an extended symmetric form (the objective function can be directed to both the maximum and the minimum; all constraints are specified as inequalities) </p>
+                    </div>
+                    <div id="data_table" style="display: none;">
+                    </div>
+                    <div id="variable_block" style="margin: 20px 0;">
+                   <p> Enter the number of variables </p>
+                        <select class="selectpicker" data-width="110px" name="cols" id="cols">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div id="constraints_block" style="margin: 20px 0;">
+                       <p> Enter the number of restrictions </p>
+                        <select class="selectpicker" data-width="110px" name="rows" id="rows">                            
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div id="container_for_inputs" name ="f1" ></div>
+                    <div id="error"></div>
+                    <input class="btn btn-default" id="build_structure" type="button" onclick="create_table()" value="Ok">
+                    <input class="btn btn-default" id="calculate_button" type="hidden" onclick="calculate()" value="Decide">
+                    <div id="calculate_block" align="center" style="display: none;"></div>
+                </div>
+            </div>
+        </div>    
+    </div>    
+    
+    <div id="footer">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-md-8 col-md-offset-2">
+                    <span style="position:relative; top: 20px;">JSS, 2020</span>
+                    <!--<i class="fab fa-angrycreative" ></i>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/jquery.min.js"></script>       
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/symplex_method.js"></script>
+</body>
+</html>

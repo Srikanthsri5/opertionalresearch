@@ -1,0 +1,102 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Northwest corner method </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon-logo.png" />
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.css" >
+    <link rel="stylesheet" href="../css/fa-brands.css" >
+    <link rel="stylesheet" href="../css/fa-regular.css" >
+    <link rel="stylesheet" href="../css/fa-solid.css" >
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+</head>
+<body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand" href="../index.html">Operational Research Project </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                   <li> <a href="../index.html"> Home </a> </li>
+                    <li class = "dropdown active"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Methods </a>
+                        <ul class = "li_navbar dropdown-menu">
+                            <li> <a href="simplex_method.html"> Simplex Method </a> </li>
+                            <li> <a href="north_west_angle.html"> Northwest Angle Method </a> </li>
+                            <li> <a href="graphic_method.html"> Graphic method for solving LPP </a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content_block">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-12">
+                   <h1 id = "# header_description"> The "northwest corner" method and the potential method for solving the transport problem </h1>
+                    <p style = "margin: 20px 0;" align = "justify"> This method was proposed by Danzig in 1951 and named by Charnes and Cooper "the northwest corner rule". </p>
+                    <p style = "margin: 20px 0;" align = "justify"> The essence of the method consists in sequential enumeration of the rows and columns of the transport table, starting from the left column and the top row, and writing out the maximum possible shipments in the corresponding table cells so that the supplier's or consumer's requirements stated in the problem are not exceeded. </p> <p style = "margin: 20px 0;" align = "justify"> The delivery prices are not paid attention to in this method, since further optimization of shipments is performed using the potential method. </p>
+					<p> Enter the number of suppliers: </p>
+                    <input class = "init_args" type = "number" min = "0" id = "carrier_number">
+                    <p> Enter the number of consumers: </p>
+                    <input class="init_args" type="number" min="0" id="consumer_number"><br>
+                    <input class="btn btn-default" type="button" id="input_button" onclick="CreateTable(); " value="Create table">
+                </div>
+                <div class="log-lg-12">
+                    <div id="input_table" align="center" style="display: none;"></div>
+                    <div id="select_apply_block" align="center" style="display: none;">
+                        <select class="selectpicker show-tick" data-size="5" data-width="auto" id="restrictions">
+                          <option value = "0"> No additional restrictions </option>
+                            <option value = "1"> Prohibition of transportation from the i-th supplier to the j-th consumer </option>
+                            <option value = "2"> Fixed supply from the i-th supplier to the j-th consumer </option>
+                            <option value = "3"> Lower supply limit </option>
+                            <option value = "4"> Upper supply limit </option>
+                        </select>
+                        <div id="restrict-block"></div>
+                        
+                        <p id="table_error_log" style="display: none; margin: 10px;" size="25"></p>
+                        
+                        <input class="btn btn-default" type="button" id="table_create_button" onClick="GiveMasElements();" value="To accept" style="display: inline;">
+                    </div>
+                </div>
+                <div class="log-lg-12">
+                    <div id="input_restrictions" align="center" style="display: none;"></div>                 
+                </div>
+                <div class="log-lg-12">
+                    <div id="calculate_block" align="center" style="display: none;"></div>                
+                </div>                    
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-md-8 col-md-offset-2">
+                    <span style="position:relative;top:20px;">JSS, 2020</span>
+                    <!--<i class="fab fa-angrycreative" ></i>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/jquery.min.js"></script>       
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script> 
+    <script src="../js/north-west-angle.js"></script>
+</body>
+</html>
